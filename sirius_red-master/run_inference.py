@@ -178,7 +178,7 @@ if __name__ == "__main__":
         # Model Parameters
         "encoder": "se_resnet18", # se_resnet18, se_resnet34, resnet18, resnet34, simclr
         "image_net_pretrained": True, # load imgnet pretrained weights
-        "load_path": False, # if not False, location of pretrained encoder weights to load
+        "best_model_weights_path": "enter_path_here", # location of pretrained encoder weights to load
         "freeze": False, # True, False or "part" - encoder weights to freeze
         "dropout": False,
         "num_layers": 1, # only for max pool models
