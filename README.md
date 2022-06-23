@@ -47,13 +47,14 @@ create_patches.py will use ilastik to segment every WSI in data_dir, and save do
 
 - Experiments use the Weights and Biases [2] software for logging metrics and visualisations. Hyperparameters can be adjusted using the configuration dictionaries under  `if __name__ == '__main__':`. The tile_path parameter should be adjusted to contain the absolute path to the output of the WSI patching
 
-    - run `unsupervised_training.py` to conduct unsupervised pretraining of the SimCLR model with a Resnet18 base
+
+    - run 'run_inference.py' to load pre-trained model weights and run inference on a dataset tiled using create_patches.py. Accuracy, F1 score and total confusion matrix are returned
     - run `run_finetune.py` to conduct supervised finetuning of models
         - training parameters that can be configured: num_epochs, batch_size, learning rate, learning rate scheduler, test and validation folds, whether to use early stopping
         - dataloading parameters that can be configured: dataloading method (multiple inference or single bags per WSI), bag size
         - architectural parameters that can be configured: use_ssc (if True then can modify SSC architecture (M,N,R,S) and reconstruction loss), , MIL architecture (max pooling, gated attention), Feature extractor (resnet18, se_resnet18, resnet34, se_resnet34, simclr pretrained), weight intialisation from load path.
 
-
+    - run `unsupervised_training.py` to conduct unsupervised pretraining of the SimCLR model with a Resnet18 base
 ### Supporting Modules
 - `ndpi_slide.py` - contains class wrapper for OpenSlide object for manipulating .ndpi files based on https://github.ic.ac.uk/jms3/sirius_red
 - `data_augment.py` - contains class for applying affine and color augmentation during training.
