@@ -7,7 +7,7 @@ This repository contains the implementation to pre-process raw Sirius-Red staine
 - Python >= 3.8.8, NVIDIA GPU 
 
 - Clone the repository to the desired location
-`` git clone https://gitlab.doc.ic.ac.uk/malpatliv/sneha.git ``
+
 
 - Download and install anaconda / miniconda onto your machine: https://www.anaconda.com/distribution/
 
